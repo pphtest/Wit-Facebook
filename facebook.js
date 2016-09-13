@@ -20,14 +20,12 @@ const fbReq = request.defaults({
 
 const fbMessage = (recipientId, msg, cb) => {
   var messageImages = {}
-	messageImages["I AM GROOT!"] = "https://media.giphy.com/media/znXPZJUqZLeda/giphy.gif"
-	messageImages["I am Groot"] = "http://www.mtv.com/crop-images/2014/05/19/groot-flower.gif"
+	messageImages["I AM GROOT!"] = "https://media.giphy.com/media/d3sE6FcNZa7Ju/giphy.gif"
 	messageImages["We are Groot"] = "http://www.mtv.com/crop-images/2014/05/19/groot-spores.gif"
 	messageImages["I. AM. GROOOOTTTT."] = "https://media.giphy.com/media/h2IeaIBzWjHmo/giphy.gif"
 
   var messageText = {}
 	messageText["We are Groot"] = "We are Groot"
-	messageImages["I am Groot"] = "I am Groot"
 	messageText["I AM GROOT!"] = "I AM GROOT!"
 	messageText["I. AM. GROOOOTTTT."] = "DIE! DIE! DIE!"
 	
