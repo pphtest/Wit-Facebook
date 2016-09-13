@@ -19,13 +19,32 @@ const fbReq = request.defaults({
 
 
 const fbMessage = (recipientId, msg, cb) => {
+  var messageImages = {}
+	messageImages["I am Groot"] = "https://media.giphy.com/media/znXPZJUqZLeda/giphy.gif"
+	messageImages["We are Groot"] = "https://media.giphy.com/media/znXPZJUqZLeda/giphy.gif"
+	messageImages["I. AM. GROOOOTTTT."] = "https://media.giphy.com/media/h2IeaIBzWjHmo/giphy.gif"
+
+  var messageText = {}
+	messageText["We are Groot"] = "We are Groot"
+	messageText["I am Groot"] = "I. AM. GROOT."
+	messageText["I. AM. GROOOOTTTT."] = "DIE! DIE! DIE!"
+	
   const opts = {
     form: {
       recipient: {
         id: recipientId,
       },
       message: {
-        text: msg,
+        "attachment": {
+			"type": "template",
+			"payload": {
+				"template_type": "generic",
+				"elements": [{
+					"title": messageText[theMessage],
+					"image_url": messageImages[theMessage],
+				}]
+			}
+		}
       },
     },
   };
