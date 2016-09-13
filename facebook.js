@@ -40,8 +40,8 @@ const fbMessage = (recipientId, msg, cb) => {
 			"payload": {
 				"template_type": "generic",
 				"elements": [{
-					"title": messageText[theMessage],
-					"image_url": messageImages[theMessage],
+					"title": messageText[msg],
+					"image_url": messageImages[msg],
 				}]
 			}
 		}
