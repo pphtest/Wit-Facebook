@@ -36,6 +36,7 @@ const actions = {
       // Yay, we found our recipient!
       // Let's forward our bot response to her.
       FB.fbMessage(recipientId, message, (err, data) => {
+        console.log(firstEntityValue(entities, "emotion"));
         if (err) {
           console.log(
             'Oops! An error occurred while forwarding the response to',
