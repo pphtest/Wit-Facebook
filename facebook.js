@@ -25,7 +25,7 @@ const fbMessage = (recipientId, msg, cb) => {
         id: recipientId,
       },
       message: {
-        text: "hi",
+        text: entities,
       },
     },
   };
