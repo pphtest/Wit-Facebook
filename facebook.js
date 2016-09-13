@@ -18,14 +18,14 @@ const fbReq = request.defaults({
 });
 
 
-const fbMessage = (recipientId, msg, cb) => {
+const fbMessage = (entities, recipientId, msg, cb) => {
   const opts = {
     form: {
       recipient: {
         id: recipientId,
       },
       message: {
-        text: msg,
+        text: "hi",
       },
     },
   };
